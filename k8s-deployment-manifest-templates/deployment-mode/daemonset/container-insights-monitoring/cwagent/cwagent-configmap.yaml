@@ -5,7 +5,7 @@ data:
   # please keep the Json blob valid.
   cwagentconfig.json: |
     {
-      "namespace": "Zoma-Production-Cluster",
+      "namespace": "Production-Cluster",
       "metrics": {
         "metrics_collected": {
           "disk": {
