@@ -5,17 +5,24 @@ data:
   # please keep the Json blob valid.
   cwagentconfig.json: |
     {
-      "logs": {
+      "namespace": "Zoma-Production-Cluster",
+      "metrics": {
         "metrics_collected": {
-          "kubernetes": {
-            "cluster_name": "{{cluster_name}}",
-            "metrics_collection_interval": 60
+          "disk": {
+            "measurement": [
+             "used_percent"
+            ],
+            "metrics_collection_interval": 3600,
+            "resources": [
+              "/"
+            ]
           }
-        },
-        "force_flush_interval": 5
+        }
       }
     }
+
 kind: ConfigMap
 metadata:
   name: cwagentconfig
   namespace: amazon-cloudwatch
+
